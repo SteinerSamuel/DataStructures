@@ -30,21 +30,22 @@ part.
 ```
 The testing program is given as follows:
 
-**public static void** main(String[]args)
+```
+public static void main(String[]args)
 {
-Complex c1= **new** Complex(3, -5);
-Complex c2= **new** Complex(8, 7);
-Complex sum = **new** Complex();
+Complex c1= new Complex(3, -5);
+Complex c2= new Complex(8, 7);
+Complex sum = new Complex();
 sum.add(c1, c2);
-Complex diff = **new** Complex();
+Complex diff = new Complex();
 diff.subtract(c1, c2);
-System. **_out_** .println("The sum is ");
+System. _out_ .println("The sum is ");
 Complex. _printResult_ (sum);
-System. **_out_** .println("The difference is ");
+System. _out_ .println("The difference is ");
 Complex. _printResult_ (diff);
 
 }
-
+```
 
 **Question 2**
 
