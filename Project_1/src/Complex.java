@@ -19,6 +19,12 @@ public class Complex {
 		imaginary=x.imaginary+y.imaginary;
 		return this;
 	}
+	
+	public Complex diff (Complex x, Complex y) {
+		real=x.real-y.real;
+		imaginary=x.imaginary-y.imaginary;
+		return this;
+	}
 
 	
 	public void display () {
@@ -39,6 +45,11 @@ public class Complex {
 		num3.add(num1, num2);
 		num3.display();
 		
+		Complex num4 =new Complex();
+		num4.display();
+		
+		num4.diff(num1, num2);
+		num4.display();
 		
 	}
 
