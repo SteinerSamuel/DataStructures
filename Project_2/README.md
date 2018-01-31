@@ -105,4 +105,4 @@ The method add cannot add another string: OK
 
 <span style="color:blue"> A framework of the class implementation is given in the attached "ArrayBag.java". But you need to work out for those 9 class functions. </span>
 
-<span style="color:red">Due 2/11/2018 11:59PM</span>
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Due 2/11/2018 11:59PM`
