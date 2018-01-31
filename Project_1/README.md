@@ -69,14 +69,13 @@ for a student record. **Note: input/output should be done with files.**
 The organization for the input file is as follows: The number at the top represents the number of
 students in a class. Following are students’ records, which consist of 6 items:
 
-```
 * student ID
 * name
 * quiz 1
 * quiz 2
 * midterm exam
 * final exam
-```
+
 “input.txt”
 
 
