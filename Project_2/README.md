@@ -14,8 +14,8 @@ Write a class ArrayBag, which includes the following operations
 
 The bag specification "BagInterface.java" and a test driver "ArrayBagTest.java" are given. Please read them carefully and complete your class implementation "ArrayBag.java". Following is an example of the output.
 
-## Testing an initially empty bag:
-
+Testing an initially empty bag:
+___
 Testing isEmpty with an empty bag:
 isEmpty finds the bag empty: OK.
 
@@ -35,10 +35,11 @@ Removing "Two" from the bag:
 remove("Two") returns false
 The bag contains 0 string(s), as follows:
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+___
 
-## Adding 6 strings to an initially empty bag with the capacity to hold more than 6 strings:
+Adding 6 strings to an initially empty bag with the capacity to hold more than 6 strings:
 
+___
 Adding One One Two One Three One
 The bag contains 6 string(s), as follows:
 One One Two One Three One
@@ -91,17 +92,17 @@ isEmpty finds the bag empty: OK.
 
 The bag contains 0 string(s), as follows:
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+___
 
 
 Testing an initially empty bag that  will be filled to capacity:
-
+___
 Adding One Two One Three Two Three Four
 The bag contains 7 string(s), as follows:
 One Two One Three Two Three Four
 Try to add XXX to the full bag:
 The method add cannot add another string: OK
 
-A framework of the class implementation is given in the attached "ArrayBag.java". But you need to work out for those 9 class functions.
+<span style="color:blue"> A framework of the class implementation is given in the attached "ArrayBag.java". But you need to work out for those 9 class functions. </span>
 
-Due 2/11/2018 11:59PM
+<span style="color:red">Due 2/11/2018 11:59PM</span>
