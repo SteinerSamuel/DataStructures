@@ -1,8 +1,7 @@
 /**
  * A test of the constructors and the methods add, toArray, isEmpty, getCurrentSize, 
  * getFrequencyOf, and contains for the class ArrayBag.
-    
-*/
+ */
 public class ArrayBagTest
 {
 	public static void main(String[] args) 

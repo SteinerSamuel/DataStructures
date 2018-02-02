@@ -1,11 +1,10 @@
-/**
- * 
- */
+import java.util.Arrays;
 
 /**
- * @author gaok
+ * @author Steiners
  *
  */
+
 public final class ArrayBag<T> implements BagInterface<T>{
 
 	private final T[] bag;
@@ -18,8 +17,11 @@ public final class ArrayBag<T> implements BagInterface<T>{
 		this (DEFAULT_CAPACITY);
 	} // end default constructor
 	
-	/** Creates an empty bag having a given capacity.
-    @param desiredCapacity  The integer capacity desired. */
+	
+	/** 
+	 * Creates an empty bag having a given capacity.
+     * @param desiredCapacity  The integer capacity desired.
+     */
 	public ArrayBag(int desiredCapacity)
 	{
 		bag=(T[]) new Object[desiredCapacity];
@@ -30,20 +32,29 @@ public final class ArrayBag<T> implements BagInterface<T>{
 	
 	@Override
 	public int getCurrentSize() {
-		// TODO Auto-generated method stub
-		return 0;
+		return numberOfEntries;
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		if(numberOfEntries > 0){
+			return false;
+		}
+		else{
+			return true;
+		}
 	}
 
 	@Override
 	public boolean add(T newEntry) {
-		// TODO Auto-generated method stub
-		return false;
+		try{
+			bag[numberOfEntries] = newEntry;
+			numberOfEntries ++;
+			return true;
+		}
+		catch (ArrayIndexOutOfBoundsException e){
+			return false;
+		}
 	}
 
 	@Override
@@ -60,8 +71,7 @@ public final class ArrayBag<T> implements BagInterface<T>{
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-		
+		Arrays.fill(bag, null);
 	}
 
 	@Override
@@ -78,8 +88,12 @@ public final class ArrayBag<T> implements BagInterface<T>{
 
 	@Override
 	public T[] toArray() {
-		// TODO Auto-generated method stub
-		return null;
+		if(isEmpty()){
+			return null;
+		}
+		else{
+			return bag;
+		}
 	}
 	
 }
