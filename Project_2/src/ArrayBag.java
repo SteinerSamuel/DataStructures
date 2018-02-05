@@ -65,24 +65,41 @@ public final class ArrayBag<T> implements BagInterface<T>{
 
 	@Override
 	public boolean remove(T anEntry) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean removed = false;
+		for( int i = 0; i < bag.length; i++){			
+			if(bag[i] == anEntry){
+				bag[i] = null;
+				numberOfEntries --;
+				removed = true;
+			}
+		}
+		return removed;
 	}
 
 	@Override
 	public void clear() {
 		Arrays.fill(bag, null);
+		numberOfEntries = 0;
 	}
 
 	@Override
 	public int getFrequencyOf(T anEntry) {
-		// TODO Auto-generated method stub
-		return 0;
+		int frequency = 0;
+		for( int i = 0; i < bag.length; i++){			
+			if(bag[i] == anEntry){
+				frequency ++;
+			}
+		}
+		return frequency;
 	}
 
 	@Override
 	public boolean contains(T anEntry) {
-		// TODO Auto-generated method stub
+		for( int i = 0; i < bag.length; i++){			
+			if(bag[i] == anEntry){
+				return true;
+			}
+		}
 		return false;
 	}
 

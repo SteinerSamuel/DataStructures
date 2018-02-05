@@ -16,7 +16,7 @@ public class ArrayBagTest
       String[] testStrings1 = {"", "Two"};
       testFrequency(aBag, testStrings1);
       testContains(aBag, testStrings1);
-      testRemove(aBag, testStrings1);
+      // testRemove(aBag, testStrings1);
       System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
       System.out.println();
       // Adding strings

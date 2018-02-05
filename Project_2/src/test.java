@@ -12,9 +12,27 @@ public class test {
                 contentsOfBag.length + " strings:");
 	    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	    testAdd(aBag, contentsOfBag);
-	    aBag.clear();
-	    testIsEmpty(aBag, true);
+	    displayBag(aBag);
+	    
+	    
+	    String[] testStrings2 = {"One", "Two", "Three", "Four", "XXX"};
+	    testFrequency(aBag, testStrings2);
+	    
 	}
+	
+	private static void testFrequency(BagInterface<String> aBag, String[] tests)
+	{
+ 		System.out.println("\nTesting the method getFrequencyOf:");
+      for (int index = 0; index < tests.length; index++)
+      {
+         String aString = tests[index];
+         if (!aString.equals("") && (aString != null))
+         {
+            System.out.println("In this bag, the count of " + tests[index] +
+                               " is " + aBag.getFrequencyOf(tests[index]));
+         } // end if
+      } // end for
+   } // end testFrequency
 	
 	private static void testIsEmpty(BagInterface<String> aBag, boolean correctResult)
 	{
