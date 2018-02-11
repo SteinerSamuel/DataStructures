@@ -16,7 +16,7 @@ public class ArrayBagTest
       String[] testStrings1 = {"", "Two"};
       testFrequency(aBag, testStrings1);
       testContains(aBag, testStrings1);
-      // testRemove(aBag, testStrings1);
+      testRemove(aBag, testStrings1);
       System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
       System.out.println();
       // Adding strings
@@ -102,7 +102,7 @@ public class ArrayBagTest
    // correctResult indicates what isEmpty should return.   
 	private static void testIsEmpty(BagInterface<String> aBag, boolean correctResult)
 	{
-      System.out.print("Testing isEmpty with ");
+	    System.out.print("Testing isEmpty with ");
       if (correctResult)
          System.out.println("an empty bag:");
       else
