@@ -2,15 +2,15 @@
 
 Write a class ArrayBag, which includes the following operations
 
-    Get the current number of entries in this bag.
-    See whether this bag is empty.
-    Add a new entry to this bag.
-    Remove one unspecified entry from this bag, if possible.
-    Remove all occurrences of a given entry from this bag.
-    Remove all entries from this bag. */
-    Count the number of times a given entry appears in this bag.
-    Test whether this bag contains a given entry.
-    Retrieve all entries that are in this bag
+    • Get the current number of entries in this bag.
+    • See whether this bag is empty.
+    • Add a new entry to this bag.
+    • Remove one unspecified entry from this bag, if possible.
+    • Remove all occurrences of a given entry from this bag.
+    • Remove all entries from this bag. */
+    • Count the number of times a given entry appears in this bag.
+    • Test whether this bag contains a given entry.
+    • Retrieve all entries that are in this bag
 
 The bag specification "BagInterface.java" and a test driver "ArrayBagTest.java" are given. Please read them carefully and complete your class implementation "ArrayBag.java". Following is an example of the output.
 
