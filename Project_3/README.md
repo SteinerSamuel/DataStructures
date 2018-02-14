@@ -1,3 +1,6 @@
+
+# Project 3: Linked Based Bag
+
 Write a class LinkedBag, which includes the following operations (the same as the ArrayBag in Project 2)
 
     •Get the current number of entries in this bag.
