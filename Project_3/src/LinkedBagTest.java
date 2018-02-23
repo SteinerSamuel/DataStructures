@@ -55,10 +55,12 @@ public class LinkedBagTest
       testAdd(aBag, contentsOfBag2);
       
       System.out.println("Try to add XXX to the full bag:");
-      if (aBag.add("XXX"))
-         System.out.println("Added a string beyond the bag's capacity: ERROR!");
+      if (aBag.add("XXX")) {
+         System.out.println("Added a string beyond the bag's capacity: OK!");
+         displayBag(aBag);
+      }
       else
-         System.out.println("The method add cannot add another string: OK");
+         System.out.println("The method add cannot add another string: ERROR!");
 	} // end main
 	
    // Tests the method add.
@@ -166,4 +168,3 @@ public class LinkedBagTest
 		System.out.println();
 	} // end displayBag
 } // end ArrayBagTest
-
