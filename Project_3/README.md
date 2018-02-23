@@ -14,7 +14,8 @@ Write a class LinkedBag, which includes the following operations (the same as th
     •Retrieve all entries that are in this bag.
 
 The bag specification "BagInterface.java" is the same file as we provided for Project 2. The test driver "LinkedBagTest.java" is quite similar to the test driver given in Project 2 except minor change for two places. Please read them carefully and complete your class implementation "LinkedBag.java".  The output should be look like 
-"""
+
+```
 Testing an initially empty bag:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Testing isEmpty with an empty bag:
@@ -104,4 +105,4 @@ Try to add XXX to the full bag:
 Added a string beyond the bag's capacity: OK!
 The bag contains 8 string(s), as follows:
 XXX Four Three Two Three One Two One 
-"""
+```
