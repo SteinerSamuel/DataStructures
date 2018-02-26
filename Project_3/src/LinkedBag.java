@@ -32,17 +32,17 @@ public class LinkedBag<T> implements BagInterface<T>{
 	{
 		firstNode=null;
 		numberOfEntries= 0;
-	} // end default constructor
+	} // end default constructor creates a empty
 	
 	@Override
 	public int getCurrentSize() {
 		return numberOfEntries;
-	}
+	} // Returns the number of entries in the bag
 
 	@Override
 	public boolean isEmpty() {
 		return numberOfEntries <= 0;
-	}
+	} // Returns true if the bag is empty
 
 	@Override
 	public boolean add(T newEntry) {
@@ -50,7 +50,7 @@ public class LinkedBag<T> implements BagInterface<T>{
 		firstNode = newNode;
 		numberOfEntries ++;
 		return true;
-	}
+	} // adds a new entry to the bag at the beginning  
 
 	@Override
 	public T remove() {
@@ -62,7 +62,7 @@ public class LinkedBag<T> implements BagInterface<T>{
 		}
 		else{
 			return null;
-		}
+		} // removes the first item in the bag (Linked List)
 	}
 
  	// Locates a given entry within this bag.
@@ -80,35 +80,43 @@ public class LinkedBag<T> implements BagInterface<T>{
 		return currentNode;
 	} // end getReferenceTo
 
+	//Removes all occurrences of anEntry from the bag
 	@Override
 	public boolean remove(T anEntry) {
         boolean removed = false;
         Node currentNode;
         Node previousNode = null;
-
+        
+        // walks through all entries of the bag
         for (currentNode = firstNode; currentNode != null; currentNode = currentNode.next){
-            if (anEntry == currentNode.data) {
+            if (anEntry == currentNode.data) { 
+            	// if the entry in the bag is the same as the specified value test to see if it is the first node
                 if(previousNode == null){
+                	// removes the first node and subtracts one from the numberOfEntries
                     firstNode = firstNode.next;
                     numberOfEntries --;
                     removed = true;
                 }
                 else{
+                	// If its not the first node removes the node and fixes references 
                     previousNode.next = currentNode.next;
                     numberOfEntries --;
                     removed = true;
                 }
             }
-            previousNode = currentNode;
+            else{
+            	// if the entry is not removed sets the last node looked at as previousNode
+            	previousNode = currentNode;
+            }
         }
         return removed;
-	}
+	}// Returns True if anEntry was found and removed
 
 	@Override
 	public void clear() {
 		firstNode = null;
 		numberOfEntries = 0;
-	}
+	}// empties the bag completely setting numberOfEntries to 0
 
 	@Override
 	public int getFrequencyOf(T anEntry) {
@@ -119,7 +127,7 @@ public class LinkedBag<T> implements BagInterface<T>{
             }
         }
 		return freq;
-	}
+	}// Gets the frequency of an entry 
 
 	@Override
 	public boolean contains(T anEntry) {
@@ -129,7 +137,7 @@ public class LinkedBag<T> implements BagInterface<T>{
         else {
 		    return true;
         }
-	}
+	}// checks if anEntry is in the bag
 
 	@Override
 	public T[] toArray() {
@@ -138,15 +146,10 @@ public class LinkedBag<T> implements BagInterface<T>{
 		int i =0;// index of array
 		
 		for(Node current = firstNode; current != null; current = current.next){
-		    try{
-			    result[i] = current.data;
-			    i ++;
-            }
-            catch (ArrayIndexOutOfBoundsException e){
-		        System.out.print("Fix This");
-            }
+			result[i] = current.data;
+			i ++;
         }
 		return result;
-	}
+	}// takes the bag and puts it into an array for easy printing
 	
 }
