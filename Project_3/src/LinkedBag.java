@@ -82,25 +82,53 @@ public class LinkedBag<T> implements BagInterface<T>{
 
 	@Override
 	public boolean remove(T anEntry) {
-		return false;
+        boolean removed = false;
+        Node currentNode;
+        Node previousNode = null;
+
+        for (currentNode = firstNode; currentNode != null; currentNode = currentNode.next){
+            if (anEntry == currentNode.data) {
+                if(previousNode == null){
+                    firstNode = firstNode.next;
+                    numberOfEntries --;
+                    removed = true;
+                }
+                else{
+                    previousNode.next = currentNode.next;
+                    numberOfEntries --;
+                    removed = true;
+                }
+            }
+            previousNode = currentNode;
+        }
+        return removed;
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-		
+		firstNode = null;
+		numberOfEntries = 0;
 	}
 
 	@Override
 	public int getFrequencyOf(T anEntry) {
-		// TODO Auto-generated method stub
-		return 0;
+	    int freq = 0;
+		for (Node currentNode = firstNode; currentNode != null; currentNode = currentNode.next){
+		    if (anEntry == currentNode.data){
+		        freq ++;
+            }
+        }
+		return freq;
 	}
 
 	@Override
 	public boolean contains(T anEntry) {
-		// TODO Auto-generated method stub
-		return false;
+		if(getReferenceTo(anEntry)== null) {
+            return false;
+        }
+        else {
+		    return true;
+        }
 	}
 
 	@Override
@@ -110,9 +138,14 @@ public class LinkedBag<T> implements BagInterface<T>{
 		int i =0;// index of array
 		
 		for(Node current = firstNode; current != null; current = current.next){
-			result[i] = current.data;
-			i ++;
-		}
+		    try{
+			    result[i] = current.data;
+			    i ++;
+            }
+            catch (ArrayIndexOutOfBoundsException e){
+		        System.out.print("Fix This");
+            }
+        }
 		return result;
 	}
 	
