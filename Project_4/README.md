@@ -2,15 +2,15 @@
 
 Using a circular array to implement a deque, which includes the following operations
 
-    create an empty deque
-    test if the deque is empty
-    insert a new item at front into the deque
-    insert a new item at back into the deque
-    remove the item at front in the deque
-    remove the item at back in the deque
-    get the item at front in the deque
-    get the item at back in the deque
-    Retrieves all entries that are in the deque
+ * create an empty deque
+ * test if the deque is empty
+ * insert a new item at front into the deque
+ * insert a new item at back into the deque
+ * remove the item at front in the deque
+ * remove the item at back in the deque
+ * get the item at front in the deque
+ * get the item at back in the deque
+ * Retrieves all entries that are in the deque
 
 The framework of the CArrayDeque class is given in "CArrayDeque.java" and a test driver is given in "DequeTest.java". Please read them carefully and complete your class methods in "CArrayDeque.java". Following is an example of the output.
 ```
