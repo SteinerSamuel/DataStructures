@@ -9,3 +9,6 @@ Creates a bag object using an generic fix sized array to hold the 'items'
 
 ## [Project 3](/Project_3/): Linked List Based Bag
 Same bag object as project two but using linked lists now instead of a fixed sized array
+
+## [Project 4](/Project_4/): Project 4: Circular Array Based Deque
+A deque implemented with a circular array
